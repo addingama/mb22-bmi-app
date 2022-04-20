@@ -23,8 +23,10 @@ public class FormActivity extends AppCompatActivity {
                 double tb = 1.68; // m
                 double bmi = bb/(Math.pow(tb, 2));
 
+                // TODO: Ubah bmi menjadi 2 desimal di belakang koma
                 Intent intent = new Intent(FormActivity.this, ResultActivity.class);
                 intent.putExtra("bmi", bmi);
+                intent.putExtra("nama", getIntent().getStringExtra("nama"));
                 startActivity(intent);
             }
         });
